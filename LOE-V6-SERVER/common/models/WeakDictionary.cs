@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 #endregion
 
-namespace common
+namespace core
 {
     // Adds strong typing to WeakReference.Target using generics. Also, the Create factory method is
     // used in place of a constructor to handle the case where target is null, but we want the

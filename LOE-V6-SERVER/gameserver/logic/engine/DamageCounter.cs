@@ -6,7 +6,7 @@ using gameserver.realm;
 using gameserver.realm.entity;
 using gameserver.realm.entity.player;
 using gameserver.realm.world;
-using common;
+using core;
 
 #endregion
 

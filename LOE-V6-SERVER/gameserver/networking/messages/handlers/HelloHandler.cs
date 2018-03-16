@@ -1,7 +1,7 @@
 ﻿#region
 
 using System.Linq;
-using common;
+using core;
 using System.Text;
 using gameserver.networking.incoming;
 using gameserver.networking.outgoing;

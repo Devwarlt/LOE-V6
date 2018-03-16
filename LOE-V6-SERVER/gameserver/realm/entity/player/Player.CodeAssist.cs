@@ -1,6 +1,6 @@
 ﻿#region
 
-using common.config;
+using core.config;
 using System;
 using System.Collections.Generic;
 using System.Linq;

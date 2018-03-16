@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using log4net;
 using gameserver.realm.entity.player;
-using common.config;
+using core.config;
 
 #endregion
 

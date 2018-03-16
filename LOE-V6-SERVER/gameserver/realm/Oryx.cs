@@ -10,7 +10,7 @@ using gameserver.realm.entity;
 using gameserver.realm.entity.player;
 using gameserver.realm.mapsetpiece;
 using gameserver.realm.world;
-using common.config;
+using core.config;
 using gameserver.realm.terrain;
 using static gameserver.networking.Client;
 

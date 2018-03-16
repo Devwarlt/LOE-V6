@@ -9,7 +9,7 @@ using gameserver.realm.entity;
 using gameserver.realm.entity.player;
 using gameserver.logic.transitions;
 using gameserver.realm.entity.merchant;
-using common.config;
+using core.config;
 
 #endregion
 

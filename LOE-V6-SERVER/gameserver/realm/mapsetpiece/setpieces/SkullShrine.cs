@@ -1,7 +1,7 @@
 ﻿#region
 
 using System;
-using common;
+using core;
 using terrain;
 using gameserver.realm.terrain;
 

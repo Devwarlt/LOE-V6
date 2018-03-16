@@ -6,7 +6,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using gameserver.logic;
 using gameserver.networking;
-using common.config;
+using core.config;
 
 #endregion
 

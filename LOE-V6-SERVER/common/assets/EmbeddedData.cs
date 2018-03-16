@@ -13,7 +13,7 @@ using System.Threading;
 
 #endregion
 
-namespace common
+namespace core
 {
     public class EmbeddedData : IDisposable
     {
@@ -297,7 +297,7 @@ namespace common
             }
         }
 
-        private class AutoAssign : common.AutoAssign
+        private class AutoAssign : core.AutoAssign
         {
             private EmbeddedData dat;
             private int nextFullId;

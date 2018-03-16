@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using gameserver.realm;
-using common;
+using core;
 
 #endregion
 

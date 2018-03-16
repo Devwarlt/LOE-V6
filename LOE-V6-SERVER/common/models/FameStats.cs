@@ -7,7 +7,7 @@ using System.Linq;
 
 #endregion
 
-namespace common
+namespace core
 {
     public class FameStats
     {

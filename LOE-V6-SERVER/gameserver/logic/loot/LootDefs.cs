@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using common;
+using core;
 using gameserver.realm;
 using gameserver.realm.entity;
 using gameserver.realm.entity.player;

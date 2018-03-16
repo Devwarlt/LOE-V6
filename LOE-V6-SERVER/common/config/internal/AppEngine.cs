@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Xml.Linq;
 
-namespace common.config
+namespace core.config
 {
     public partial class Settings
     {

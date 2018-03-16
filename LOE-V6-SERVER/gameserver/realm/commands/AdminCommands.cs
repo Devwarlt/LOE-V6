@@ -10,7 +10,7 @@ using gameserver.networking.outgoing;
 using gameserver.realm.entity.player;
 using gameserver.realm.mapsetpiece;
 using gameserver.realm.world;
-using common.config;
+using core.config;
 using static gameserver.networking.Client;
 
 #endregion

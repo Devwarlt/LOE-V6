@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using common;
+using core;
 using log4net;
 using gameserver.logic;
 using gameserver.networking;
 using gameserver.realm.commands;
 using gameserver.realm.entity.player;
 using gameserver.realm.world;
-using common.config;
+using core.config;
 using gameserver.realm.entity.merchant;
 using static gameserver.networking.Client;
 

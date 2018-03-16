@@ -4,8 +4,8 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using log4net;
-using common;
-using common.config;
+using core;
+using core.config;
 
 #endregion
 

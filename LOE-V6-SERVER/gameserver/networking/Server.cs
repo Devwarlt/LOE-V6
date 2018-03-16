@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using log4net;
 using gameserver.realm;
-using common.config;
+using core.config;
 using static gameserver.networking.Client;
 
 #endregion

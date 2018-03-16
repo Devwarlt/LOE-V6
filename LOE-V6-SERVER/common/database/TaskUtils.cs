@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace common
+namespace core
 {
     public static class TaskUtils
     {

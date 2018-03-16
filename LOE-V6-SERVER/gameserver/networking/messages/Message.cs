@@ -7,7 +7,7 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using gameserver.networking.outgoing;
-using common;
+using core;
 
 #endregion
 

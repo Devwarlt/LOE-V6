@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Net.Sockets;
 using log4net;
-using common.config;
+using core.config;
 using static gameserver.networking.Client;
 
 namespace gameserver.networking

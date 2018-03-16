@@ -3,7 +3,7 @@
 using Mono.Game;
 using gameserver.realm;
 using gameserver.realm.terrain;
-using common;
+using core;
 
 #endregion
 

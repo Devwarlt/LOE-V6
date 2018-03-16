@@ -2,7 +2,7 @@
 
 using System;
 using System.Linq;
-using common;
+using core;
 using gameserver.logic.loot;
 using gameserver.realm.entity;
 using gameserver.realm.terrain;

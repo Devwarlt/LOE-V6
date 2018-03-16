@@ -7,7 +7,7 @@ using System.Text;
 
 #endregion
 
-namespace common
+namespace core
 {
     public class NWriter : BinaryWriter
     {

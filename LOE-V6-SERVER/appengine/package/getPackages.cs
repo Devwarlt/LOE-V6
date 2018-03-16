@@ -1,6 +1,6 @@
 ﻿#region
 
-using common.config;
+using core.config;
 using log4net;
 using System;
 using System.IO;

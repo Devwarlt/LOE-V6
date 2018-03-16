@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using common;
+using core;
 using Ionic.Zlib;
 using gameserver.realm.entity;
 using log4net;

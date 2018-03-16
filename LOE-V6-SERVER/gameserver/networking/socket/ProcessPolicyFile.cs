@@ -1,5 +1,5 @@
-﻿using common;
-using common.config;
+﻿using core;
+using core.config;
 using System.Net.Sockets;
 using static gameserver.networking.Client;
 

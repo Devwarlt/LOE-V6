@@ -1,5 +1,5 @@
-﻿using common;
-using common.config;
+﻿using core;
+using core.config;
 using gameserver.realm;
 using System;
 using System.Collections.Generic;

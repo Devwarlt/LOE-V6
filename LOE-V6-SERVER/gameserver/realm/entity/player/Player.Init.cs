@@ -9,7 +9,7 @@ using gameserver.networking.incoming;
 using gameserver.networking.outgoing;
 using System.Xml.Linq;
 using gameserver.realm.terrain;
-using common.config;
+using core.config;
 using static gameserver.networking.Client;
 
 #endregion

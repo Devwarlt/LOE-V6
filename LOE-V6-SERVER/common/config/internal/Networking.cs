@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace common.config
+namespace core.config
 {
     public partial class Settings
     {

@@ -1,6 +1,6 @@
 ﻿#region
 
-using common;
+using core;
 using log4net;
 using log4net.Config;
 using System;
@@ -10,7 +10,7 @@ using System.IO;
 using System.Net;
 using System.Threading;
 using appengine.sfx;
-using common.config;
+using core.config;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;

@@ -1,7 +1,7 @@
 ﻿#region
 
 using BookSleeve;
-using common.config;
+using core.config;
 using log4net;
 using Newtonsoft.Json;
 using System;
@@ -12,7 +12,7 @@ using System.Text;
 
 #endregion
 
-namespace common
+namespace core
 {
     public class Database : RedisConnection
     {

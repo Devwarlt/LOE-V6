@@ -7,7 +7,7 @@ using gameserver.networking.incoming;
 using gameserver.networking.outgoing;
 using gameserver.realm.entity;
 using gameserver.realm.entity.player;
-using common.config;
+using core.config;
 using gameserver.realm.commands.mreyeball;
 
 #endregion

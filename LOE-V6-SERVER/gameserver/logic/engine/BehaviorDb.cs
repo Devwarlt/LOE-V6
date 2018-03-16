@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
-using common;
+using core;
 using log4net;
 using gameserver.logic.loot;
 using gameserver.realm;

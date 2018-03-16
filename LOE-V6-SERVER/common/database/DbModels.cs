@@ -1,7 +1,7 @@
 ﻿#region
 
 using BookSleeve;
-using common.config;
+using core.config;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 
 #endregion
 
-namespace common
+namespace core
 {
     #region RedisObject
 
