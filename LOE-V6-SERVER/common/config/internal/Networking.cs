@@ -31,8 +31,8 @@ namespace common.config
                 public static readonly List<string> PRODUCTION_DDNS = new List<string>{
                     "testing.loesoft.org", "localhost"
                 };
-                
-                public static readonly string SELECTED_DOMAINS = 
+
+                public static readonly string SELECTED_DOMAINS =
                     @"<cross-domain-policy>
                         <policy-file-request/>
                         <site-control permitted-cross-domain-policies=""master-only""/>

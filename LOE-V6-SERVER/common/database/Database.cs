@@ -338,15 +338,15 @@ namespace common
             skinList.Add(skin);
             int[] result = skinList.ToArray();
             acc.OwnedSkins = result;
-        	acc.Flush();
-        	acc.Reload();
+            acc.Flush();
+            acc.Reload();
         }
 
         public bool CheckMysteryBox(DbAccount acc, int box, int total)
         {
             List<int> boxList = acc.PurchasedBoxes.ToList();
             int purchases = 0;
-            foreach(IGrouping<int, int> i in boxList.GroupBy(j => j))
+            foreach (IGrouping<int, int> i in boxList.GroupBy(j => j))
                 if (i.Key == box)
                     purchases = i.Count();
             if (purchases < total)
@@ -359,7 +359,7 @@ namespace common
         {
             List<int> packageList = acc.PurchasedPackages.ToList();
             int purchases = 0;
-            foreach(IGrouping<int, int> i in packageList.GroupBy(j => j))
+            foreach (IGrouping<int, int> i in packageList.GroupBy(j => j))
                 if (i.Key == package)
                     purchases = i.Count();
             if (purchases < maxpurchases)
@@ -374,8 +374,8 @@ namespace common
             boxList.Add(box);
             int[] result = boxList.ToArray();
             acc.PurchasedBoxes = result;
-        	acc.Flush();
-        	acc.Reload();
+            acc.Flush();
+            acc.Reload();
         }
 
         public void AddPackage(DbAccount acc, int package)
@@ -384,8 +384,8 @@ namespace common
             packageList.Add(package);
             int[] result = packageList.ToArray();
             acc.PurchasedPackages = result;
-        	acc.Flush();
-        	acc.Reload();
+            acc.Flush();
+            acc.Reload();
         }
 
         public void UpdateCredit(DbAccount acc, int amount)
@@ -613,23 +613,23 @@ namespace common
 
         public void MuteAccount(DbAccount acc)
         {
-        	Hashes.Set(0, acc.Key, "muted", "1");
-        	acc.Flush();
-        	acc.Reload();
+            Hashes.Set(0, acc.Key, "muted", "1");
+            acc.Flush();
+            acc.Reload();
         }
 
         public void UnmuteAccount(DbAccount acc)
         {
-        	Hashes.Set(0, acc.Key, "muted", "0");
-        	acc.Flush();
-        	acc.Reload();
+            Hashes.Set(0, acc.Key, "muted", "0");
+            acc.Flush();
+            acc.Reload();
         }
 
         public void BanAccount(DbAccount acc)
         {
-        	Hashes.Set(0, acc.Key, "banned", "1");
-        	acc.Flush();
-        	acc.Reload();
+            Hashes.Set(0, acc.Key, "banned", "1");
+            acc.Flush();
+            acc.Reload();
         }
 
         public List<string> GetLockeds(DbAccount acc)
@@ -724,7 +724,7 @@ namespace common
                 int[] result = x.ToArray();
                 acc.Ignored = result;
                 acc.Flush();
-                acc.Reload(); 
+                acc.Reload();
             }
         }
 
@@ -776,7 +776,7 @@ namespace common
                 return AddGuildMemberStatus.InAnotherGuild;
 
             int guildSize = 100;
-          
+
             if (guild.Members.Length >= guildSize)
                 return AddGuildMemberStatus.GuildFull;
 
@@ -785,7 +785,7 @@ namespace common
                 return AddGuildMemberStatus.IsAMember;
             members.Add(Convert.ToInt32(acc.AccountId));
             guild.Members = members.ToArray();
-             guild.Flush();
+            guild.Flush();
 
             acc.GuildId = Convert.ToString(guild.Id);
             acc.GuildRank = (founder) ? 40 : 0;

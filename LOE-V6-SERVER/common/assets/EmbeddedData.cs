@@ -17,7 +17,7 @@ namespace common
 {
     public class EmbeddedData : IDisposable
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof (EmbeddedData));
+        private static readonly ILog log = LogManager.GetLogger(typeof(EmbeddedData));
 
         private readonly XElement addition;
 
@@ -55,7 +55,7 @@ namespace common
             Random rnd = new Random();
             string response = $"[{time[1]}] [{nameof(EmbeddedData)}] ({(current + 1)}/{total}) {Utils.ToLowercaseNamingConvention(currentFilePath.Replace("xmls\\", "").Replace("EmbeddedData_", "").Replace(".xml", "").Replace("CXML", ""))}";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.SetCursorPosition(1,0);
+            Console.SetCursorPosition(1, 0);
             Console.Write($"\r{response}                                                                        {((current + 1) == total ? "\n\n" : "")}");
             //Thread.Sleep(rnd.Next(35, 85));
             Console.ResetColor();
@@ -95,7 +95,8 @@ namespace common
                     if (i + 1 == xmls.Length)
                         loaded = true;
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 log.Error(ex);
             }
@@ -137,7 +138,7 @@ namespace common
         public IDictionary<ushort, PetStruct> TypeToPet { get; private set; }
         public IDictionary<string, PetSkin> IdToPetSkin { get; private set; }
         public IDictionary<ushort, SetTypeSkin> SetTypeSkins { get; private set; }
-        
+
 
         public string[] AdditionXml
         {
@@ -291,7 +292,7 @@ namespace common
         {
             if (prevUpdateCount != updateCount)
             {
-                addXml = new[] {addition.ToString()};
+                addXml = new[] { addition.ToString() };
                 prevUpdateCount = updateCount;
             }
         }

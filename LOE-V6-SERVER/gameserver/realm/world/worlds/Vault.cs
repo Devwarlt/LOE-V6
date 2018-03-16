@@ -137,7 +137,7 @@ namespace gameserver.realm.world
                 vaultChestPosition.RemoveAt(0);
 
                 _vaultChests[Tuple.Create(con, i)] = con.UpdateCount;
-            } 
+            }
 
             foreach (IntPoint i in giftChestPosition)
             {

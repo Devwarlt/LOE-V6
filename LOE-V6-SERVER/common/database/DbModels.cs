@@ -353,26 +353,26 @@ namespace common
 
         public bool Muted
         {
-	        get { return GetValue("muted", false); }
-	        set { SetValue("muted", value); }
+            get { return GetValue("muted", false); }
+            set { SetValue("muted", value); }
         }
 
         public bool Banned
         {
-	        get { return GetValue("banned", false); }
-	        set { SetValue("banned", value); }
+            get { return GetValue("banned", false); }
+            set { SetValue("banned", value); }
         }
 
         public int[] Locked
         {
-        	get { return GetValue<int[]>("locked"); }
-        	set { SetValue("locked", value); }
+            get { return GetValue<int[]>("locked"); }
+            set { SetValue("locked", value); }
         }
 
         public int[] Ignored
         {
-        	get { return GetValue<int[]>("ignored"); }
-        	set { SetValue("ignored", value); }
+            get { return GetValue<int[]>("ignored"); }
+            set { SetValue("ignored", value); }
         }
     }
 
@@ -517,8 +517,8 @@ namespace common
 
         public int[] Backpack
         {
-	        get { return GetValue<int[]>("backpack"); }
-	        set { SetValue("backpack", value); }
+            get { return GetValue<int[]>("backpack"); }
+            set { SetValue("backpack", value); }
         }
 
         public int HP

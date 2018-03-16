@@ -614,7 +614,7 @@ namespace appengine
 
     internal class ItemCosts
     {
-        
+
         public static XElement ToXml()
         {
             purchaseSkin x = new purchaseSkin();

@@ -1,6 +1,6 @@
 ﻿namespace common.config
 {
-    public enum AccountType:int
+    public enum AccountType : int
     {
         FREE_ACCOUNT = 0,
         VIP_ACCOUNT = 1,

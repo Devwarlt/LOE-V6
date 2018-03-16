@@ -26,10 +26,10 @@ namespace gameserver.networking.handlers
             }
             else
                 if (client.Account.Credits >= 50)
-                {
-                    client.Manager.Database.UpdateCredit(client.Account, -50);
-                    client.Player.UpdateCount++;
-                }
+            {
+                client.Manager.Database.UpdateCredit(client.Account, -50);
+                client.Player.UpdateCount++;
+            }
             client.Player.SaveToCharacter();
             World world = client.Player.Manager.AddWorld(new Arena());
             client.Reconnect(new RECONNECT

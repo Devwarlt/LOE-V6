@@ -256,7 +256,7 @@ public class XMLBehaviorType
     public double Protect_protectionRange { get; private set; }
     public double Protect_reprotectRange { get; private set; }
     #endregion "Protect"
-    
+
     #region "Wander"
     public double Wander_speed { get; private set; }
     #endregion "Wander"
@@ -266,9 +266,9 @@ public class XMLBehaviorType
     public XMLBehaviorType(XElement elem)
     {
         BehaviorsType = (XMLBehaviorsType)Enum.Parse(typeof(XMLBehaviorsType), elem.Value);
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
-        switch(BehaviorsType)
+        switch (BehaviorsType)
         {
             case XMLBehaviorsType.AoE:
             case XMLBehaviorsType.ApplySetpiece:
@@ -309,19 +309,22 @@ public class XMLBehaviorType
                     {
                         if (elem.Attribute("acquireRange").Value != "default") Protect_acquireRange = double.Parse(elem.Attribute("acquireRange").Value, NumberStyles.Any, ci);
                         else Protect_acquireRange = 10;
-                    } else Protect_acquireRange = 10;
+                    }
+                    else Protect_acquireRange = 10;
                     if (elem.Attribute("protectee") != null) Protect_protectee = elem.Attribute("protectee").Value;
                     else Protect_protectee = "itself"; //wut? xd
                     if (elem.Attribute("protectionRange") != null)
                     {
                         if (elem.Attribute("protectionRange").Value != "default") Protect_protectionRange = double.Parse(elem.Attribute("protectionRange").Value, NumberStyles.Any, ci);
                         else Protect_protectionRange = 2;
-                    } else Protect_protectionRange = 2;
+                    }
+                    else Protect_protectionRange = 2;
                     if (elem.Attribute("reprotectRange") != null)
                     {
                         if (elem.Attribute("reprotectRange").Value != "default") Protect_reprotectRange = double.Parse(elem.Attribute("reprotectRange").Value, NumberStyles.Any, ci);
                         else Protect_reprotectRange = 1;
-                    } else Protect_reprotectRange = 1;
+                    }
+                    else Protect_reprotectRange = 1;
                     if (elem.Attribute("speed") != null) Protect_speed = double.Parse(elem.Attribute("speed").Value, NumberStyles.Any, ci);
                     else Protect_speed = 0;
                 }
@@ -379,9 +382,9 @@ public class XMLTransitionType
     public XMLTransitionType(XElement elem)
     {
         TransitionsType = (XMLTransitionsType)Enum.Parse(typeof(XMLTransitionsType), elem.Value);
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
-        switch(TransitionsType)
+        switch (TransitionsType)
         {
             case XMLTransitionsType.ChatTransition:
             case XMLTransitionsType.DamageTakenTransition:
@@ -412,9 +415,9 @@ public class XMLLootType
     public XMLLootType(XElement elem)
     {
         LootsType = (XMLLootsType)Enum.Parse(typeof(XMLLootsType), elem.Value);
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
-        switch(LootsType)
+        switch (LootsType)
         {
             case XMLLootsType.EggLoot:
             case XMLLootsType.ItemLoot:
@@ -445,7 +448,7 @@ public class PetStruct
         else
             PetFamily = (Family)Enum.Parse(typeof(Family), elem.Element("Family").Value);
         PetRarity = (Rarity)Enum.Parse(typeof(Rarity), elem.Element("Rarity").Value);
-        if(elem.Element("FirstAbility") != null)
+        if (elem.Element("FirstAbility") != null)
             FirstAbility = (Ability)Enum.Parse(typeof(Ability), elem.Element("FirstAbility").Value.Replace(" ", string.Empty));
         DefaultSkin = elem.Element("DefaultSkin").Value;
         Size = int.Parse(elem.Element("Size").Value);
@@ -485,14 +488,14 @@ public class ConditionEffect
 
     public ConditionEffect(XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
-        Effect = (ConditionEffectIndex) Enum.Parse(typeof (ConditionEffectIndex), elem.Value.Replace(" ", ""));
+        Effect = (ConditionEffectIndex)Enum.Parse(typeof(ConditionEffectIndex), elem.Value.Replace(" ", ""));
         if (elem.Attribute("duration") != null)
-            DurationMS = (int) (float.Parse(elem.Attribute("duration").Value, NumberStyles.Any, ci)*1000);
+            DurationMS = (int)(float.Parse(elem.Attribute("duration").Value, NumberStyles.Any, ci) * 1000);
         if (elem.Attribute("range") != null)
             Range = float.Parse(elem.Attribute("range").Value, NumberStyles.Any, ci);
-        if(elem.Attribute("target") != null)
+        if (elem.Attribute("target") != null)
             Target = int.Parse(elem.Attribute("target").Value, NumberStyles.Any, ci);
     }
 
@@ -506,7 +509,7 @@ public class ProjectileDesc
 {
     public ProjectileDesc(XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
         XElement n;
         if (elem.Attribute("id") != null)
@@ -542,7 +545,7 @@ public class ProjectileDesc
         n = elem.Element("Frequency");
         Frequency = n != null ? float.Parse(n.Value, NumberStyles.Any, ci) : 1;
         n = elem.Element("Magnitude");
-        Magnitude = n != null ? float.Parse(n.Value, NumberStyles.Any, ci) : 3; 
+        Magnitude = n != null ? float.Parse(n.Value, NumberStyles.Any, ci) : 3;
     }
 
     public int BulletType { get; private set; }
@@ -613,9 +616,9 @@ public class ActivateEffect
 {
     public ActivateEffect(XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
-        Effect = (ActivateEffects) Enum.Parse(typeof (ActivateEffects), elem.Value);
+        Effect = (ActivateEffects)Enum.Parse(typeof(ActivateEffects), elem.Value);
         if (elem.Attribute("stat") != null)
             Stats = Utils.FromString(elem.Attribute("stat").Value);
 
@@ -632,13 +635,13 @@ public class ActivateEffect
         if (elem.Attribute("skinId") != null)
             PetSkindId = Utils.FromString(elem.Attribute("skinId").Value);
         if (elem.Attribute("duration2") != null)
-            DurationMS2 = (int) (float.Parse(elem.Attribute("duration2").Value, NumberStyles.Any, ci)*1000);
+            DurationMS2 = (int)(float.Parse(elem.Attribute("duration2").Value, NumberStyles.Any, ci) * 1000);
         if (elem.Attribute("effect") != null)
             ConditionEffect =
-                (ConditionEffectIndex) Enum.Parse(typeof (ConditionEffectIndex), elem.Attribute("effect").Value);
+                (ConditionEffectIndex)Enum.Parse(typeof(ConditionEffectIndex), elem.Attribute("effect").Value);
         if (elem.Attribute("condEffect") != null)
             ConditionEffect =
-                (ConditionEffectIndex) Enum.Parse(typeof (ConditionEffectIndex), elem.Attribute("condEffect").Value);
+                (ConditionEffectIndex)Enum.Parse(typeof(ConditionEffectIndex), elem.Attribute("condEffect").Value);
         if (elem.Attribute("condDuration") != null)
             EffectDuration = float.Parse(elem.Attribute("condDuration").Value, NumberStyles.Any, ci);
 
@@ -747,7 +750,7 @@ public class Item : IFeedable
     {
         try
         {
-            CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+            CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
             ci.NumberFormat.CurrencyDecimalSeparator = ".";
             XElement n;
             ObjectType = type;
@@ -770,7 +773,7 @@ public class Item : IFeedable
             Usable = elem.Element("Usable") != null;
             BagType = (n = elem.Element("BagType")) != null ? Utils.FromString(n.Value) : 0;
             MpCost = (n = elem.Element("MpCost")) != null ? Utils.FromString(n.Value) : 0;
-            FeedPower = (n = elem.Element("feedPower")) != null ? (ushort) Utils.FromString(n.Value) : (ushort) 0;
+            FeedPower = (n = elem.Element("feedPower")) != null ? (ushort)Utils.FromString(n.Value) : (ushort)0;
             FameBonus = (n = elem.Element("FameBonus")) != null ? Utils.FromString(n.Value) : 0;
             NumProjectiles = (n = elem.Element("NumProjectiles")) != null ? Utils.FromString(n.Value) : 1;
             ArcGap = (n = elem.Element("ArcGap")) != null ? Utils.FromString(n.Value) : 11.25f;
@@ -887,7 +890,7 @@ public class ObjectDesc
 {
     public ObjectDesc(ushort type, XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
         XElement n;
         ObjectType = type;
@@ -928,7 +931,7 @@ public class ObjectDesc
         if (elem.Elements("BehaviorType") != null) BehaviorType = elem.Elements("BehaviorType").Select(i => new XMLBehaviorType(i)).ToArray();
         if (elem.Elements("TransitionType") != null) TransitionType = elem.Elements("TransitionType").Select(i => new XMLTransitionType(i)).ToArray();
         if (elem.Elements("LootType") != null) LootType = elem.Elements("LootType").Select(i => new XMLLootType(i)).ToArray();
-        
+
         //To select properly BehaviorType as reference is extremelly recommended to use 'i.BehaviorsType.ToString() == "NAME_OF_BEHAVIORTYPE"' after all!
         //foreach(var i in BehaviorType)
         //{
@@ -1103,7 +1106,7 @@ public class TileDesc
 {
     public TileDesc(ushort type, XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
         XElement n;
         ObjectType = type;
@@ -1148,10 +1151,10 @@ public class DungeonDesc
 {
     public DungeonDesc(XElement elem)
     {
-        CultureInfo ci = (CultureInfo) CultureInfo.CurrentCulture.Clone();
+        CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
         ci.NumberFormat.CurrencyDecimalSeparator = ".";
         Name = elem.Attribute("name").Value;
-        PortalId = (ushort) Utils.FromString(elem.Attribute("type").Value);
+        PortalId = (ushort)Utils.FromString(elem.Attribute("type").Value);
         Background = Utils.FromString(elem.Element("Background").Value);
         AllowTeleport = elem.Element("AllowTeleport") != null;
         Json = elem.Element("Json").Value;
