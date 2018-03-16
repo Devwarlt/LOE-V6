@@ -11,7 +11,11 @@ namespace gameserver.networking
         {
             NetworkStream s = new NetworkStream(skt);
             NWriter wtr = new NWriter(s);
-            wtr.WriteNullTerminatedString(Settings.IS_PRODUCTION ? Settings.NETWORKING.INTERNAL.SELECTED_DOMAINS : Settings.NETWORKING.INTERNAL.LOCALHOST_DOMAINS);
+            wtr.WriteNullTerminatedString(
+                @"<cross-domain-policy>
+                    <allow-access-from domain=""*"" to-ports=""*"" />
+                </cross-domain-policy>"
+            );
             wtr.Write((byte)'\r');
             wtr.Write((byte)'\n');
             parent.Disconnect(DisconnectReason.PROCESS_POLICY_FILE);

@@ -15,8 +15,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 using System.Linq;
-using System.Net.Sockets;
-using System.Text;
 
 #endregion
 
