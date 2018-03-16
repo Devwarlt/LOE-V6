@@ -178,6 +178,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="account\register.cs" />
+    <Content Include="app\globalNews\globalNews.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\language\english.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\inGameNews\getNews.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -221,16 +230,22 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="app\init.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mysterybox\miniGames.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="package\packageResponse.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core\LoESoft.Core.csproj">
       <Project>{A417BDBC-8D6F-4661-9B23-2BEE92E295AB}</Project>
       <Name>LoESoft.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties app_4languages_4english_1json__JSONSchema="http://json.schemastore.org/apple-app-site-association" />
-    </VisualStudio>
-  </ProjectExtensions>
+  <ProjectExtensions />
 </Project>
