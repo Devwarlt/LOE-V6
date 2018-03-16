@@ -1,10 +1,8 @@
 ﻿#region
 
-using core.config;
 using log4net;
 using System;
 using System.IO;
-using System.Net;
 using System.Xml;
 
 #endregion
@@ -13,14 +11,6 @@ namespace appengine.package
 {
     internal class getPackages : RequestHandler
     {
-        //scope
-        internal static class CONSTANTS
-        {
-            internal static readonly string appengine = Settings.NETWORKING.APPENGINE_URL;
-            internal static WebClient client = new WebClient();
-            internal static readonly string file = "/app/packages/packageResponse.xml";
-        }
-
         protected override void HandleRequest()
         {
             string response = SerializePackageResponse.Serialize();
@@ -53,9 +43,16 @@ namespace appengine.package
             internal static SerializePackageResponse GetPackage(int id)
             {
                 XmlDocument doc = new XmlDocument();
-                string response = CONSTANTS.client.DownloadString(CONSTANTS.appengine + CONSTANTS.file);
+
+                string response = File.ReadAllText("package/packageResponse.xml");
+
+                if (response == null)
+                    return null;
+
                 doc.LoadXml(response);
+
                 XmlNodeList packageResponse = doc.GetElementsByTagName("Package");
+
                 if (packageResponse.Count > 0)
                 {
                     for (int i = 0; i < packageResponse.Count; i++)
@@ -92,8 +89,14 @@ namespace appengine.package
             internal static string Serialize()
             {
                 XmlDocument doc = new XmlDocument();
-                string response = CONSTANTS.client.DownloadString(CONSTANTS.appengine + CONSTANTS.file);
+
+                string response = File.ReadAllText("package/packageResponse.xml");
+
+                if (response == null)
+                    return null;
+
                 doc.LoadXml(response);
+
                 try
                 {
                     StringWriter wtr = new StringWriter();
