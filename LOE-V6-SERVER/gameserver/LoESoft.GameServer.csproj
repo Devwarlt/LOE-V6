@@ -547,7 +547,7 @@
       <Project>{2ADA25D1-158E-4E88-B91B-F79981372136}</Project>
       <Name>LoESoft.AppEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\common\LoESoft.Core.csproj">
+    <ProjectReference Include="..\core\LoESoft.Core.csproj">
       <Project>{A417BDBC-8D6F-4661-9B23-2BEE92E295AB}</Project>
       <Name>LoESoft.Core</Name>
     </ProjectReference>

@@ -223,7 +223,7 @@
   -->
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\common\LoESoft.Core.csproj">
+    <ProjectReference Include="..\core\LoESoft.Core.csproj">
       <Project>{A417BDBC-8D6F-4661-9B23-2BEE92E295AB}</Project>
       <Name>LoESoft.Core</Name>
     </ProjectReference>
